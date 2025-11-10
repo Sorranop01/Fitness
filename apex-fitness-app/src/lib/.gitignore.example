@@ -1,0 +1,12 @@
+# IMPORTANT: Firebase config should be in environment variables
+# This is just an example. The actual firebase.ts contains hardcoded values
+# which should be moved to .env for production
+
+# Recommended approach:
+# 1. Create .env file with:
+#    VITE_FIREBASE_API_KEY=...
+#    VITE_FIREBASE_AUTH_DOMAIN=...
+#    etc.
+#
+# 2. Update firebase.ts to use:
+#    apiKey: import.meta.env.VITE_FIREBASE_API_KEY
