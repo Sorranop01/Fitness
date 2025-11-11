@@ -1,15 +1,53 @@
 {
+	"name": "apex-fitness-app",
+	"version": "1.0.0",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc --noEmit && vite build",
+		"preview": "vite preview",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"format": "biome format --write .",
+		"type-check": "tsc --noEmit",
+		"test": "vitest",
+		"test:ui": "vitest --ui",
+		"test:coverage": "vitest --coverage",
+		"firebase:emulators": "firebase emulators:start",
+		"firebase:deploy": "firebase deploy",
+		"firebase:deploy:hosting": "firebase deploy --only hosting",
+		"firebase:deploy:functions": "firebase deploy --only functions",
+		"firebase:deploy:firestore": "firebase deploy --only firestore:rules,firestore:indexes"
+	},
 	"dependencies": {
 		"@tanstack/react-query": "5.90.2",
 		"firebase": "~12.5.0",
 		"lucide-react": "0.542.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
 		"react-router-dom": "^7.9.5",
 		"zod": "3.23.8",
 		"zustand": "5.0.7"
 	},
 	"devDependencies": {
+		"@biomejs/biome": "^2.2.5",
+		"@types/node": "^22.0.0",
+		"@types/react": "^18.2.0",
+		"@types/react-dom": "^18.2.0",
+		"@vitejs/plugin-react": "^4.3.4",
+		"@vitest/ui": "^3.2.0",
 		"autoprefixer": "^10.4.21",
+		"firebase-tools": "^13.0.0",
 		"postcss": "^8.5.6",
-		"tailwindcss": "~4.1.17"
-	}
+		"tailwindcss": "~4.1.17",
+		"typescript": "^5.6.0",
+		"vite": "^7.0.0",
+		"vitest": "^3.2.0"
+	},
+	"engines": {
+		"node": ">=20.0.0",
+		"pnpm": ">=10.0.0"
+	},
+	"packageManager": "pnpm@10.0.0"
 }
